@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Resources{% endblock title %}
+
+{% block link %}"../static/resources.css"{% endblock link %}
+
+{% block body %}
+<div class="custom-table">
+    <table class="table ">
+        <thead>
+          <tr>
+            <th scope="col">S.NO</th>
+            <th scope="col">Title</th>
+            <th scope="col">Date</th>
+            <th scope="col">Document</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% comment %} <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td><a href=""><img src="../static/images/view-white.png" alt=""></a></td>
+          </tr> {% endcomment %}
+          {% for resource in resources %}
+            <tr id="{{resource.s_no}}">
+                <th scope="row">{{resource.s_no}}</th>
+                <td>{{resource.title}}</td>
+                <td>{{resource.date}}</td>
+                <td><a href="{{resource.doc.url}}"><img src="../static/images/view-white.png" alt="image" class=" bg-danger table-img "></a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>    
+</div>
+
+{% endblock body %}

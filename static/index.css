@@ -1,0 +1,125 @@
+.front{
+    height: 90vh;
+    /* background: rgb(238, 238, 238); */
+    display: flex;
+    flex-direction: column;
+    background-image: url("./images/GGUgate2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    text-align: center;
+}
+.logo img{
+    width: 150px;
+    height: 150px;
+}
+.line{
+    width: 60%;
+    height: 5px;
+    background: #2b3e5a;
+}
+.faculty{
+    padding-left: 75px;
+    padding-right: 75px;
+}
+.custom_card{
+    width: 100%;
+}
+#faculty-image{
+    height: 100% !important;
+}
+.img-card{
+    width: 25% !important;
+}
+.img-card img{
+    width: 100%;
+}
+.mission,.benefits{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4em;
+    padding-left: 75px;
+    padding-right: 75px;
+    height: fit-content;
+}
+/* #mvv-img{
+    width: 400px;
+    height: auto;
+} */
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.success-stories{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+.story-card{
+    width: 500px;
+    height: auto;
+}
+.footer{
+    width: 100%;
+}
+.fb-img,.twitter{
+    width: 35px !important;
+    height: 35px !important;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+}
+@media(max-width:750px){
+    .faculty{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .success-stories{
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+        align-items: center ;
+    }
+    .success-stories > .card{
+        padding-left: 10px;
+        width: auto !important;
+        
+        padding-right: 10px;
+    }
+    .mission,.benefits{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media(max-width:1000px){
+    .cover{
+        display: flex;
+        flex-direction: column !important;
+    }
+    .image-cover{
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+    }
+    .mission{
+        flex-direction: column;
+    }
+    .img-card{
+        width: 50% !important;
+        justify-content: center;
+        margin: auto;
+    }
+    .benefits{
+        flex-direction: column-reverse !important;
+    }
+    .benefits > .col-md-4{
+        margin: auto !important;
+    }
+}

@@ -1,0 +1,81 @@
+.team_image{
+  width: auto !important;
+  height: 215px !important;
+}
+.team-nav{
+  width: fit-content;
+  display: flex;
+  margin: auto;
+  border-radius: 8px;
+
+}
+#team1,#team2,#team4, #team5, #team6, #team7, #team3{
+  display: none;
+}
+
+.nav-btn{
+  color: white !important;
+}
+.nav-btn:hover{
+  background-color: black !important;
+  transition: 0.3s;
+}
+.team-opt:hover{
+  background-color: black;
+  transition: 0.3s;
+}
+.members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap !important;
+  margin-bottom: 2em;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.pres {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: dodgerblue;
+  width: 300px;
+  height: 300px;
+  color: white;
+  transform: rotateY(180deg);
+}

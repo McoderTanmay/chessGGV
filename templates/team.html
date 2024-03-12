@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}team{% endblock title %}
+
+{% block link %}"../static/team.css"{% endblock link %}
+
+{% block body %}
+<center><h1 class="primary mt-5 mb-5 text-primary">Our Team</h1></center>
+<div class="pres mb-5 mt-3">
+  {% for presedent in presedents %}
+    <div class="card me-3" style="width: 18rem;">
+      <img src="{{presedent.pres_image.url}}" class="card-img-top team_image" alt="...">
+      <div class="card-body">
+        <p class="card-text">{{presedent.pres_name}}</p>
+        <h5 class="card-title">{{presedent.pres_position}}</h5>
+      </div>
+    </div>
+  {% comment %} <div class="flip-card me-2">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img
+          src="{{presedent.pres_image.url}}"
+          alt="Avatar"
+          style="width: 300px; height: 300px"
+        />
+      </div>
+      <div class="flip-card-back">
+        <h1>{{presedent.pres_name}}</h1>
+        <p>{{presedent.pres_position}}</p>
+      </div>
+    </div>
+  </div> {% endcomment %}
+  {% endfor %}
+</div>
+<center><h1 class="primary mt-5 mb-5 text-primary">All Members</h1></center>
+<div class="members">
+  {% for member in members %}
+  <div class="card me-3 mb-3" style="width: 18rem;">
+    <img src="{{member.member_image.url}}" class="card-img-top team_image" alt="...">
+    <div class="card-body">
+      <p class="card-text">{{member.member_name}}</p>
+      {% comment %} <p class="card-text">Event Team</p> {% endcomment %}
+      <h5 class="card-title">{{member.member_position}}</h5>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock body %}

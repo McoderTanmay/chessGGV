@@ -1,0 +1,8 @@
+.cover{
+    /* padding: 100px;*/
+    height: auto; 
+}
+.image-carousel{
+    background-size: cover;
+    width: auto;
+}

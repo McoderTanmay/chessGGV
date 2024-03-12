@@ -1,0 +1,9 @@
+.container{
+    width: 50% !important;
+}
+@media(max-width:625px){
+    .container{
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
