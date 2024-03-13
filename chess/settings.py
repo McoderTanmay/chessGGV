@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-*-r8$dif*yb6cropa8y&575ux*#tk7g)6ixeu%spd95gyrc0gz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1']
 
 
 # Application definition
@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'chess.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER':'postgres',
+        'PASSWORD':'CSnmubvsaGfWbLVAnjxxbRwDGMIzenUq',
+        'HOST':'monorail.proxy.rlwy.net',
+        'PORT':'13633'
     }
 }
 
@@ -126,9 +130,12 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Added manually
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
